@@ -4,7 +4,7 @@
 
 SharePoint Online PowerShell is a set of cmdlets for managing and automating tasks related to **SharePoint Online**, which is part of the Microsoft 365 ecosystem. These cmdlets offer administrative control over SharePoint sites, libraries, users, permissions, and content, allowing you to perform operations in bulk or automate routine tasks.
 
-#### **Getting Started with SharePoint Online PowerShell**
+### **Getting Started with SharePoint Online PowerShell**
 
 1.  **Installing the SharePoint Online PowerShell Module**\
     To manage SharePoint Online with PowerShell, you need to install the **SharePoint Online Management Shell** or use **Microsoft.Online.SharePoint.PowerShell**:

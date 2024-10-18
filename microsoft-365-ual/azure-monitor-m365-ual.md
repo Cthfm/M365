@@ -1,6 +1,6 @@
 # Azure Monitor: M365 UAL
 
-Overview
+## Overview
 
 The following is a link to the table reference for M365 UAL in Azure Monitor.&#x20;
 

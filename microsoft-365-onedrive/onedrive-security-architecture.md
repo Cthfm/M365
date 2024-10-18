@@ -1,6 +1,6 @@
 # OneDrive Security Architecture
 
-#### **Overview**
+## **Overview**
 
 This section provides an understanding of OneDrive's security architecture, focusing on its built-in security mechanisms, integration with other Microsoft security tools, and how it protects organizational data.
 
@@ -57,7 +57,7 @@ OneDrive adheres to several industry and regulatory compliance standards, ensuri
 * **Data Residency and Sovereignty:**
   * OneDrive allows organizations to choose where their data is stored geographically. This is crucial for complying with data residency laws, such as GDPR, which requires organizations to store personal data within the European Union.
 
-#### **Microsoft Defender for Office 365**
+### **Microsoft Defender for Office 365**
 
 OneDrive includes threat detection capabilities provided by **Microsoft Defender for Office 365**, which scans for malware and other malicious activities in real-time.
 
@@ -66,7 +66,7 @@ OneDrive includes threat detection capabilities provided by **Microsoft Defender
 
 ***
 
-#### **Conditional Access for OneDrive**
+### **Conditional Access for OneDrive**
 
 **Conditional Access** is a crucial component of OneDrive’s security architecture, allowing organizations to define and enforce granular access policies.
 

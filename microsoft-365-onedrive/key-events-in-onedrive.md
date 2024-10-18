@@ -1,12 +1,12 @@
 # Key Events in OneDrive
 
-#### **Understanding Key Events in OneDrive Logs**
+## **Understanding Key Events in OneDrive Logs**
 
 OneDrive logs a variety of events that provide insights into user activities, file interactions, and potential security threats. By understanding these key events, threat hunters can monitor abnormal behavior, detect unauthorized access, and mitigate risks effectively.
 
 Here are the most important event types in OneDrive logs:
 
-**1. File Access Events**
+### **File Access Events**
 
 *   **FileAccessed:**
 
@@ -17,13 +17,7 @@ Here are the most important event types in OneDrive logs:
     * **Threat Hunting Focus:** Suspicious access by unrecognized users or abnormal access times (e.g., access during non-working hours).
     * **Example Use Case:** Detecting a compromised user account that is accessing confidential files.
 
-    **PowerShell Query Example:**
-
-    ```powershell
-    Search-UnifiedAuditLog -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" -Operations FileAccessed -UserIds user@example.com
-    ```
-
-**2. File Download Events**
+### **File Download Events**
 
 *   **FileDownloaded:**
 
@@ -34,13 +28,7 @@ Here are the most important event types in OneDrive logs:
     * **Threat Hunting Focus:** Sudden spikes in the number of downloaded files or downloads from unusual IP addresses.
     * **Example Use Case:** Detecting an insider threat where an employee is downloading a large volume of sensitive data before leaving the company.
 
-    **PowerShell Query Example:**
-
-    ```powershell
-    Search-UnifiedAuditLog -Operations FileDownloaded -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" -UserIds user@example.com
-    ```
-
-**3. File Deletion Events**
+### **File Deletion Events**
 
 *   **FileDeleted:**
 
@@ -51,13 +39,7 @@ Here are the most important event types in OneDrive logs:
     * **Threat Hunting Focus:** Large-scale deletions, deletions of critical or sensitive files, or deletions that happen shortly after files are modified.
     * **Example Use Case:** Detecting a ransomware attack by identifying mass file deletions or abnormal file deletion behavior.
 
-    **PowerShell Query Example:**
-
-    ```PowerShell
-    PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileDeleted -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
-    ```
-
-**4. File Modification Events**
+### **File Modification Events**
 
 *   **FileModified:**
 
@@ -68,13 +50,7 @@ Here are the most important event types in OneDrive logs:
     * **Threat Hunting Focus:** Unusual modifications to sensitive files, modifications followed by file deletions, or modifications outside regular working hours.
     * **Example Use Case:** Detecting an external attacker or insider threat modifying files to sabotage data integrity or introduce backdoors into shared documents.
 
-    **PowerShell Query Example:**
-
-    ```powershell
-    Search-UnifiedAuditLog -Operations FileModified -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
-    ```
-
-**5. Sharing Events**
+### **Sharing Events**
 
 *   **SharingInvitationCreated:**
 
@@ -84,12 +60,6 @@ Here are the most important event types in OneDrive logs:
 
     * **Threat Hunting Focus:** Unusual or excessive external sharing of sensitive files, sharing with unapproved external domains, or the creation of public links.
     * **Example Use Case:** Detecting unauthorized sharing of confidential company documents with external domains or competitors.
-
-    **PowerShell Query Example:**
-
-    ```powershell
-    Search-UnifiedAuditLog -Operations SharingInvitationCreated -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
-    ```
 *   **SharingLinkCreated:**
 
     * This event logs the creation of sharing links for files or folders. If a public sharing link is created (i.e., “Anyone with the link” access), it could expose sensitive data to the public internet.
@@ -99,13 +69,7 @@ Here are the most important event types in OneDrive logs:
     * **Threat Hunting Focus:** Creation of public or anonymous links for files that should remain private or restricted. Public links for sensitive or confidential documents should be immediately investigated.
     * **Example Use Case:** Detecting when an employee accidentally (or maliciously) creates a public link to a sensitive company report or intellectual property.
 
-    **PowerShell Query Example:**
-
-    ```powershell
-    Search-UnifiedAuditLog -Operations SharingLinkCreated -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.SharingLink -like "Anyone"}
-    ```
-
-**6. Synchronization Events**
+### **Synchronization Events**
 
 *   **FileSync:**
 
@@ -116,13 +80,7 @@ Here are the most important event types in OneDrive logs:
     * **Threat Hunting Focus:** Syncing from unfamiliar devices, syncing sensitive files to unapproved devices, or abnormal volumes of synced data.
     * **Example Use Case:** Detecting compromised user accounts or stolen credentials used to sync confidential files to an unauthorized device.
 
-    **PowerShell Query Example:**
-
-    ```powershell
-    Search-UnifiedAuditLog -Operations FileSync -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
-    ```
-
-**7. Permission Changes**
+### **Permission Changes**
 
 *   **PermissionChanged:**
 
@@ -133,37 +91,15 @@ Here are the most important event types in OneDrive logs:
     * **Threat Hunting Focus:** Unwarranted changes to permission levels that grant more access than necessary (e.g., converting view-only permissions to edit permissions).
     * **Example Use Case:** Detecting when a user inadvertently grants external users full edit permissions on a sensitive financial document.
 
-    **PowerShell Query Example:**
-
-    ```powershell
-    Search-UnifiedAuditLog -Operations PermissionChanged -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
-    ```
-
-***
-
-#### **Building Queries to Focus on Key Events**
+### **Building Queries to Focus on Key Events**
 
 To monitor OneDrive for suspicious activity, it is important to build targeted queries that focus on high-risk events. Here are a few practical examples:
 
-*   **Monitoring External Sharing:**
+* **Monitoring External Sharing**
+* **Detecting Mass File Downloads by a User**
+* **Tracking Abnormal File Deletions:**
 
-    ```powershell
-    Search-UnifiedAuditLog -Operations SharingInvitationCreated -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.ExternalAccess -eq "True"}
-    ```
-*   **Detecting Mass File Downloads by a User:**
-
-    ```powershell
-    Search-UnifiedAuditLog -Operations FileDownloaded -UserIds user@example.com -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.ResultSize -gt 100}
-    ```
-*   **Tracking Abnormal File Deletions:**
-
-    ```powershell
-    Search-UnifiedAuditLog -Operations FileDeleted -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.ResultSize -gt 50}
-    ```
-
-***
-
-#### **Practical Steps for Threat Hunting Using Key Events**
+### **Practical Steps for Threat Hunting Using Key Events**
 
 1. **Establish a Baseline for Normal Behavior:**
    * Monitor standard user behavior, such as average file access, sharing patterns, and synchronization volumes. This helps in identifying abnormal activity that deviates from the norm.

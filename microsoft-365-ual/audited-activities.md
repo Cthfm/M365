@@ -1,6 +1,10 @@
 # Audited Activities
 
-Microsoft 365 audit logs capture a broad range of activities across various services to provide detailed insights into user and admin actions. Key categories include:
+## Overview
+
+Microsoft 365 audit logs capture a broad range of activities across various services to provide detailed insights into user and admin actions.&#x20;
+
+Key categories include:
 
 1. **User and Admin Actions**: Logging of activities like user logins, admin operations, and policy changes.
 2. **Collaboration Activities**: Actions performed in Microsoft Teams, such as adding bots, creating channels, and managing meetings.

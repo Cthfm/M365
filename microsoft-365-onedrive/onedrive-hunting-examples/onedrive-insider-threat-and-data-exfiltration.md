@@ -1,16 +1,14 @@
 # OneDrive Insider Threat & Data Exfiltration
 
-#### **Introduction to Insider Threats & Data Exfiltration in OneDrive**
+## **Introduction to Insider Threats & Data Exfiltration in OneDrive**
 
 Insider threats are a significant risk to organizations because they often involve users who already have authorized access to sensitive data. These threats can be malicious, such as employees attempting to steal data before leaving a company, or unintentional, where users inadvertently share confidential files outside the organization.
 
-**Key Types of Insider Threats:**
+### **Key Types of Insider Threats:**
 
 * **Malicious Insiders:** Employees or contractors who intentionally exfiltrate data for personal gain, to harm the organization, or as part of corporate espionage.
 * **Accidental Insiders:** Employees who unintentionally share sensitive data externally without understanding the risks.
 * **Compromised Accounts:** Attackers who gain access to an employee’s account and use it to steal data without detection.
-
-***
 
 #### **Identifying Key Indicators of Insider Threats**
 

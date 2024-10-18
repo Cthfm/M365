@@ -1,16 +1,6 @@
 # Monitoring File Access Patterns
 
-#### **Monitoring File Access Patterns**
-
-***
-
-**Objective:**
-
-Teach students how to monitor and analyze file access patterns in OneDrive to detect suspicious or unauthorized activity. This lesson will cover how to identify unusual file access, investigate potential security incidents, and respond to threats.
-
-***
-
-#### **Introduction to File Access Monitoring in OneDrive**
+## **File Access Monitoring in OneDrive**
 
 Monitoring file access patterns in OneDrive is crucial for detecting both external and internal threats. Abnormal file access can signal various types of risks, including account compromise, insider threats, and potential data exfiltration. By identifying deviations from normal access patterns, security teams can quickly identify and mitigate potential security incidents.
 
@@ -20,9 +10,7 @@ Monitoring file access patterns in OneDrive is crucial for detecting both extern
 * **Insider Threats:** Employees accessing files without proper authorization or outside their regular duties.
 * **Data Exfiltration:** Large volumes of files accessed or downloaded in a short time period.
 
-***
-
-#### **Identifying Normal vs. Suspicious File Access Patterns**
+### **Identifying Normal vs. Suspicious File Access Patterns**
 
 Before detecting suspicious activity, it’s essential to establish a baseline of normal file access behavior in the organization. This includes typical working hours, locations, access frequencies, and files accessed by different user roles.
 
@@ -35,9 +23,7 @@ Before detecting suspicious activity, it’s essential to establish a baseline o
 
 Once the baseline is established, deviations from these patterns can be flagged as suspicious.
 
-***
-
-#### **Detecting Unusual File Access Behavior**
+### **Detecting Unusual File Access Behavior**
 
 Several file access scenarios should be closely monitored to identify suspicious activities:
 
@@ -52,8 +38,8 @@ If a user accesses OneDrive files from an unexpected geographic location or an u
 
 **PowerShell Query Example:**
 
-```PowerShell
-PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileAccessed -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.IPAddress -notlike "KnownIPRange"}
+```powershell
+Search-UnifiedAuditLog -Operations FileAccessed -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.IPAddress -notlike "KnownIPRange"}
 ```
 
 ***
@@ -69,8 +55,8 @@ Users accessing files outside of regular working hours, especially late at night
 
 **PowerShell Query Example:**
 
-```PowerShell
-PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileAccessed -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.CreationTime -like "*:00:00 AM"}
+```powershell
+Search-UnifiedAuditLog -Operations FileAccessed -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.CreationTime -like "*:00:00 AM"}
 ```
 
 ***
@@ -103,13 +89,13 @@ Unusually large numbers of files being accessed or downloaded in a short period 
 
 **PowerShell Query Example:**
 
-```PowerShell
-PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileDownloaded -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Group-Object -Property UserId | Where-Object {$_.Count -gt 50}
+```powershell
+Search-UnifiedAuditLog -Operations FileDownloaded -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Group-Object -Property UserId | Where-Object {$_.Count -gt 50}
 ```
 
 ***
 
-#### **Case Study: Detecting Abnormal File Access Patterns**
+### **Case Study: Detecting Abnormal File Access Patterns**
 
 **Scenario:**\
 A marketing team employee suddenly begins accessing confidential financial files, which they have no business need to view. These accesses occur late at night, outside of normal working hours. Security analysts need to determine whether this is a case of account compromise or insider threat.
@@ -133,9 +119,7 @@ A marketing team employee suddenly begins accessing confidential financial files
 4. **Respond to the Threat:**
    * If the access pattern indicates potential account compromise or insider threat, consider immediately disabling the account, revoking access to the files, and escalating the investigation.
 
-***
-
-#### **Best Practices for Monitoring File Access in OneDrive**
+### **Best Practices for Monitoring File Access in OneDrive**
 
 1. **Automate Alerts for Suspicious Access:**
    * Set up automated alerts using tools like **Microsoft Defender for Cloud Apps** (formerly MCAS) or **Microsoft Sentinel** to flag unusual file access patterns, such as access from unfamiliar locations or during off-hours.

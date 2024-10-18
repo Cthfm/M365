@@ -1,18 +1,16 @@
 # OneDrive Synchronization
 
-#### **OneDrive Synchronization**
+## **OneDrive Synchronization**
 
 OneDrive allows users to sync files between their devices and the cloud, ensuring that files are up-to-date across multiple devices. While this feature enhances productivity, it also introduces potential security risks. Malicious actors can exploit synchronization to propagate ransomware, insiders can sync and exfiltrate sensitive data, and compromised devices can sync files without the user’s knowledge.
 
-**Key Risks of Unmonitored Synchronization:**
+### **Key Risks of Unmonitored Synchronization:**
 
 * **Ransomware Propagation:** Files infected with ransomware on a local device can be synced to the cloud, encrypting files across all devices.
 * **Data Exfiltration:** Employees may use the sync feature to download sensitive data to unauthorized devices.
 * **Compromised Devices:** If a compromised device syncs with OneDrive, it can lead to data theft or malware spread.
 
-***
-
-#### **Key Events to Monitor for Sync Issues**
+### **Key Events to Monitor for Sync Issues**
 
 The Unified Audit Log (UAL) in OneDrive logs synchronization events, providing critical insights into the syncing behavior of users and devices. By focusing on sync-related events, security teams can detect and respond to potential threats.
 
@@ -26,8 +24,8 @@ The Unified Audit Log (UAL) in OneDrive logs synchronization events, providing c
 
 **PowerShell Query Example:**
 
-```PowerShell
-PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileSync -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
+```powershell
+Search-UnifiedAuditLog -Operations FileSync -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
 ```
 
 ***
@@ -44,8 +42,8 @@ PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileSync -StartDate "MM/DD
 
 **PowerShell Query Example:**
 
-```PowerShell
-PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileModified, FileDeleted -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
+```powershell
+Search-UnifiedAuditLog -Operations FileModified, FileDeleted -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
 ```
 
 ***
@@ -61,12 +59,10 @@ Users typically sync OneDrive files from company-managed devices. Syncing from u
 **PowerShell Query Example:**
 
 ```PowerShell
-PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileSync -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.ClientApp -notlike "ManagedDevices"}
+Search-UnifiedAuditLog -Operations FileSync -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.ClientApp -notlike "ManagedDevices"}
 ```
 
-***
-
-#### **Detecting and Investigating Abnormal Sync Patterns**
+### **Detecting and Investigating Abnormal Sync Patterns**
 
 Monitoring sync patterns can help detect various types of threats, including ransomware, insider attacks, and account compromise. Here are common scenarios to watch for:
 
@@ -81,8 +77,8 @@ Unusually large sync operations, especially involving sensitive files, can indic
 
 **PowerShell Query Example:**
 
-```PowerShell
-PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileSync -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Group-Object -Property UserId | Where-Object {$_.Count -gt 100}
+```powershell
+Search-UnifiedAuditLog -Operations FileSync -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Group-Object -Property UserId | Where-Object {$_.Count -gt 100}
 ```
 
 ***
@@ -99,7 +95,7 @@ Sync activity from unfamiliar geographic locations can signal compromised creden
 **PowerShell Query Example:**
 
 ```PowerShell
-PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileSync -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.IPAddress -notlike "KnownIPRange"}
+Search-UnifiedAuditLog -Operations FileSync -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.IPAddress -notlike "KnownIPRange"}
 ```
 
 ***
@@ -115,42 +111,26 @@ Ransomware infections can spread rapidly through file synchronization. As infect
 
 **PowerShell Query Example:**
 
-```PowerShell
-PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileModified, FileDeleted -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.ResultSize -gt 50}
+```powershell
+Search-UnifiedAuditLog -Operations FileModified, FileDeleted -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.ResultSize -gt 50}
 ```
 
 ***
 
-#### **Case Study: Detecting Ransomware Spread via OneDrive Sync**
+### **Case Study: Detecting Ransomware Spread via OneDrive Sync**
 
 **Scenario:** A user’s laptop becomes infected with ransomware. As files on the laptop are encrypted, the ransomware spreads by syncing the encrypted files back to OneDrive, locking out access to shared files for the entire team. This behavior needs to be detected and stopped quickly to prevent further damage.
 
 **Steps for Investigation:**
 
 1. **Query for Sync Activity:**
-   *   Use the following PowerShell command to identify all sync events from the user’s account:
-
-       ```PowerShell
-       PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileSync -UserIds user@example.com -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
-       ```
 2. **Check for Mass Modifications:**
-   *   Review logs for mass file modifications, especially changes in file names or extensions:
-
-       ```PowerShell
-       PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileModified -UserIds user@example.com -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.FileExtension -match ".lock|.enc"}
-       ```
 3. **Investigate File Deletions:**
-   *   Check for mass deletions occurring after the sync, which could indicate further ransomware activity:
-
-       ```PowerShell
-       PowerShellCopy codeSearch-UnifiedAuditLog -Operations FileDeleted -UserIds user@example.com -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY"
-       ```
+   * Check for mass deletions occurring after the sync, which could indicate further ransomware activity:
 4. **Respond to the Threat:**
-   * Suspend the affected user’s OneDrive account to stop the sync process, then initiate recovery efforts by restoring file versions from before the ransomware infection.
+   * Suspend the affected user’s OneDrive account to stop the sync process, then initiate recovery efforts by restoring file versions from before the ransomware infections.
 
-***
-
-#### **Best Practices for Monitoring and Managing Sync Activity**
+### **Best Practices for Monitoring and Managing Sync Activity**
 
 1. **Monitor for Large Sync Operations:**
    * Set up alerts for large sync operations, especially when sensitive data is involved. Unusual sync activity can indicate data exfiltration or malware propagation.

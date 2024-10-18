@@ -4,7 +4,7 @@
 
 OneDrive’s collaboration features allow users to easily share files with both internal and external users. While this is a key productivity feature, it also presents significant security risks if not properly monitored. Attackers or insiders may attempt to exfiltrate data by sharing sensitive files, or users may inadvertently share files externally without proper access controls.
 
-**Key Risks of Uncontrolled File Sharing:**
+### **Key Risks of Uncontrolled File Sharing:**
 
 * **Data Leakage:** Sensitive files may be shared with unauthorized users or external domains.
 * **Insider Threats:** Employees with access to critical data may maliciously or unintentionally share it with external parties.
@@ -47,8 +47,6 @@ If a user suddenly shares a large number of files, especially externally, it cou
 Search-UnifiedAuditLog -Operations SharingLinkCreated -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Where-Object {$_.ResultSize -gt 50}
 ```
 
-***
-
 **3. Creation of Public Links ("Anyone with the link")**
 
 Creating links that allow anyone with the link to access a file is risky, especially if used on sensitive documents. These links are hard to control once created and can be forwarded to unintended recipients.
@@ -84,9 +82,7 @@ Monitoring the frequency of sharing invitations helps detect unusual patterns, s
 Search-UnifiedAuditLog -Operations SharingInvitationCreated -StartDate "MM/DD/YYYY" -EndDate "MM/DD/YYYY" | Group-Object -Property UserId | Where-Object {$_.Count -gt 10}
 ```
 
-***
-
-#### **Case Study: Detecting Unauthorized External Sharing**
+### **Case Study: Detecting Unauthorized External Sharing**
 
 **Scenario:**\
 A finance department employee, who typically does not share files externally, suddenly shares multiple sensitive financial reports with a personal email account (e.g., user@gmail.com). This behavior raises suspicions of potential data exfiltration.
@@ -110,9 +106,7 @@ A finance department employee, who typically does not share files externally, su
 4. **Revoke Access and Conduct a Deeper Investigation:**
    * If unauthorized external sharing is confirmed, revoke sharing permissions immediately. Escalate the incident for further investigation, particularly to check if the user account has been compromised.
 
-***
-
-#### **Best Practices for Detecting and Preventing Unauthorized Sharing**
+### **Best Practices for Detecting and Preventing Unauthorized Sharing**
 
 1. **Monitor External Sharing Activities:**
    * Continuously monitor sharing invitations, especially those that involve external domains. Use automated alerts to flag any unusual or high-volume sharing events.

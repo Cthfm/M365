@@ -38,7 +38,7 @@ Get-Process -Name "notepad"
 * `Remove`: Delete a resource
 * `Start`: Begin an operation
 
-#### **Practical Examples to Get Started** <a href="#practical-examples-to-get-started" id="practical-examples-to-get-started"></a>
+### **Practical Examples to Get Started** <a href="#practical-examples-to-get-started" id="practical-examples-to-get-started"></a>
 
 **Exercise 1: Open PowerShell**
 

@@ -1,5 +1,9 @@
 # Common Threats
 
+### **Overview:**
+
+This section of the manual goes over Exchange Online common threats. This is not an exhaustive list but will get you started.
+
 ### **Phishing Attacks**
 
 Phishing is one of the most common threats in any email service, and Exchange Online is no exception. Attackers send fraudulent emails to trick users into providing sensitive information or downloading malicious software.

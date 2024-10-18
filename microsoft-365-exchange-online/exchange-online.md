@@ -1,6 +1,6 @@
-# Exchange Online Overview
+# Exchange Online
 
-### **Overview of Exchange Online**
+## **Overview of Exchange Online**
 
 Exchange Online is a cloud-based email and calendar service designed for businesses. It is part of the broader Microsoft 365 ecosystem, providing secure, scalable, and highly available email solutions without the need for on-premises infrastructure.
 
@@ -60,7 +60,7 @@ Many organizations route their email through additional email gateways or filter
 * **Malware Filters:** Scan email attachments for known malware signatures and potential zero-day threats.
 * **Data Loss Prevention (DLP) Solutions:** Enforce compliance by preventing sensitive data (like credit card numbers) from being emailed out of the organization.
 
-### **1.5 Exchange Online Licensing**
+### **Exchange Online Licensing**
 
 Licensing for Exchange Online is usually bundled with Microsoft 365 subscriptions, though standalone licenses are available for organizations with specific needs.
 
