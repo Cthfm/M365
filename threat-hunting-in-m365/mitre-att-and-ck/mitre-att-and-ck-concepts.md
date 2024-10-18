@@ -4,13 +4,13 @@
 
 The following section goes over key MITRE Att\&ck Concepts to help those new to the framework.
 
-#### Key Concepts of MITRE ATT\&CK <a href="#key-concepts-of-mitre-att-and-ck" id="key-concepts-of-mitre-att-and-ck"></a>
+### Key Concepts of MITRE ATT\&CK <a href="#key-concepts-of-mitre-att-and-ck" id="key-concepts-of-mitre-att-and-ck"></a>
 
 1. **Tactics**
 2. **Techniques**
 3. **Procedures**
 
-#### **1. Tactics** <a href="#id-1.-tactics" id="id-1.-tactics"></a>
+### **1. Tactics** <a href="#id-1.-tactics" id="id-1.-tactics"></a>
 
 **Tactics** represent the overarching goals or objectives of an attacker during different stages of a cyber attack. Think of tactics as the "why" behind an attack. They are the high-level goals that adversaries aim to achieve. There are 14 tactics in the MITRE ATT\&CK framework, each representing a different phase of the attack lifecycle.
 
@@ -59,7 +59,7 @@ The following section goes over key MITRE Att\&ck Concepts to help those new to 
   * **Objective**: Gather information to plan future operations.
   * **Techniques**: This involves gathering information on targets, identifying potential victims, and collecting detailed target information.
 
-#### **2. Techniques** <a href="#id-2.-techniques" id="id-2.-techniques"></a>
+### **2. Techniques** <a href="#id-2.-techniques" id="id-2.-techniques"></a>
 
 **Techniques** are the specific methods or ways adversaries use to achieve the goals outlined in the tactics. Think of techniques as the "how" of an attack. Each tactic can be associated with multiple techniques, detailing the various ways attackers can pursue their objectives.
 
@@ -92,7 +92,7 @@ The following section goes over key MITRE Att\&ck Concepts to help those new to 
 * **Reconnaissance**:
   * **Examples of Techniques**: Gathering information on targets, identifying potential victims, and collecting detailed target information.
 
-#### **3. Procedures** <a href="#id-3.-procedures" id="id-3.-procedures"></a>
+### **3. Procedures** <a href="#id-3.-procedures" id="id-3.-procedures"></a>
 
 **Procedures** are the detailed, specific implementations of techniques used by adversaries. They describe exactly how a particular technique is executed. Procedures can vary widely even within the same technique, reflecting the diversity of methods attackers use in real-world scenarios.
 
@@ -100,14 +100,14 @@ The following section goes over key MITRE Att\&ck Concepts to help those new to 
 
 * For the **Defense Evasion** technique under the **Impair Defenses** tactic, a procedure might involve disabling audit logging to prevent the recording of malicious activities, making it harder for security teams to detect the adversary's presence and actions.
 
-#### How MITRE ATT\&CK is Used <a href="#how-mitre-att-and-ck-is-used" id="how-mitre-att-and-ck-is-used"></a>
+### How MITRE ATT\&CK is Used <a href="#how-mitre-att-and-ck-is-used" id="how-mitre-att-and-ck-is-used"></a>
 
 1. **Threat Detection**
 2. **Incident Response**
 3. **Security Gap Analysis**
 4. **Threat Hunting**
 
-#### **1. Threat Detection** <a href="#id-1.-threat-detection" id="id-1.-threat-detection"></a>
+### **1. Threat Detection** <a href="#id-1.-threat-detection" id="id-1.-threat-detection"></a>
 
 By mapping detected activities and behaviors to the ATT\&CK framework, security teams can better understand the tactics and techniques being used by attackers. This helps in identifying suspicious patterns and indicators of compromise (IOCs).
 
@@ -115,7 +115,7 @@ By mapping detected activities and behaviors to the ATT\&CK framework, security 
 
 * If unusual login attempts are detected from multiple IP addresses, this activity can be mapped to the **Brute Force** technique under the **Credential Access** tactic.
 
-#### **2. Incident Response** <a href="#id-2.-incident-response" id="id-2.-incident-response"></a>
+### **2. Incident Response** <a href="#id-2.-incident-response" id="id-2.-incident-response"></a>
 
 During and after a security incident, the ATT\&CK framework helps incident responders to systematically analyze and categorize the attack. This structured approach aids in identifying the full scope of the breach and in developing effective containment and remediation strategies.
 
@@ -123,7 +123,7 @@ During and after a security incident, the ATT\&CK framework helps incident respo
 
 * Analyzing a malware attack can reveal multiple techniques used, such as **File Deletion** (Defense Evasion) and **Command and Scripting Interpreter** (Execution). Knowing these helps responders address all aspects of the incident.
 
-#### **3. Security Gap Analysis** <a href="#id-3.-security-gap-analysis" id="id-3.-security-gap-analysis"></a>
+### **3. Security Gap Analysis** <a href="#id-3.-security-gap-analysis" id="id-3.-security-gap-analysis"></a>
 
 Organizations can use the ATT\&CK framework to assess their current security measures and identify gaps. By understanding which tactics and techniques are not adequately covered by existing defenses, they can prioritize improvements and investments in security controls.
 
@@ -131,7 +131,7 @@ Organizations can use the ATT\&CK framework to assess their current security mea
 
 * If an organization finds it lacks detection capabilities for the **Persistence** tactic, they might invest in tools and processes to monitor for unauthorized changes to user accounts or scheduled tasks.
 
-#### **4. Threat Hunting** <a href="#id-4.-threat-hunting" id="id-4.-threat-hunting"></a>
+### **4. Threat Hunting** <a href="#id-4.-threat-hunting" id="id-4.-threat-hunting"></a>
 
 Threat hunters use the ATT\&CK framework to proactively search for signs of adversarial activity within their networks. By focusing on specific tactics and techniques, they can develop hypotheses and queries to uncover hidden threats.
 
@@ -139,7 +139,7 @@ Threat hunters use the ATT\&CK framework to proactively search for signs of adve
 
 * A threat hunter might investigate for signs of **PowerShell** usage (Execution technique) across their environment to find potential malicious activities leveraging this powerful scripting tool.
 
-#### Benefits of the MITRE ATT\&CK Framework <a href="#benefits-of-the-mitre-att-and-ck-framework" id="benefits-of-the-mitre-att-and-ck-framework"></a>
+### Benefits of the MITRE ATT\&CK Framework <a href="#benefits-of-the-mitre-att-and-ck-framework" id="benefits-of-the-mitre-att-and-ck-framework"></a>
 
 1. **Standardization**: Provides a common language and structure for describing adversary behaviors.
 2. **Comprehensive Coverage**: Includes a wide range of tactics and techniques, offering a thorough understanding of the attack lifecycle.

@@ -1,15 +1,15 @@
 # Investigation
 
-### Overview <a href="#overview" id="overview"></a>
+## Overview <a href="#overview" id="overview"></a>
 
 The investigation stage involves in-depth data analysis to validate or dismiss hypotheses formed during the hypothesis generation stage. This section will guide you through the tools and techniques necessary for effective data collection and analysis.
 
-#### **Tools and Techniques for Data Collection and Analysis** <a href="#tools-and-techniques-for-data-collection-and-analysis" id="tools-and-techniques-for-data-collection-and-analysis"></a>
+### **Tools and Techniques for Data Collection and Analysis** <a href="#tools-and-techniques-for-data-collection-and-analysis" id="tools-and-techniques-for-data-collection-and-analysis"></a>
 
 1. **Data Collection**: Utilize security tools to gather comprehensive data from logs, network flows, and endpoint records.
 2. **Data Analysis**: Apply analytical techniques and tools to sift through collected data, looking for patterns or anomalies that align with the hypothesized threats.
 
-#### **Conducting Effective Searches** <a href="#conducting-effective-searches" id="conducting-effective-searches"></a>
+### **Conducting Effective Searches** <a href="#conducting-effective-searches" id="conducting-effective-searches"></a>
 
 * **Structured Searches**: Use queries tailored to specific data types and suspected threat activities.
 * **Efficient Analysis**: Focus on high-impact data points to streamline the investigation process and reduce noise.

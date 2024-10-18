@@ -1,10 +1,10 @@
 # MITRE ATT\&CK Mitigations
 
-Overview of MITRE ATT\&CK Mitigations
+### Overview of MITRE ATT\&CK Mitigations <a href="#overview-of-mitre-att-and-ck-mitigations" id="overview-of-mitre-att-and-ck-mitigations"></a>
 
 The MITRE ATT\&CK framework not only categorizes adversary tactics and techniques but also provides guidance on mitigations to help organizations defend against these threats. Mitigations are preventive measures that can reduce or eliminate the effectiveness of specific attack techniques. By implementing these mitigations, organizations can enhance their security posture and reduce the risk of successful cyberattacks. Here’s an overview of the key mitigations provided by the MITRE ATT\&CK framework:
 
-#### Mitigations List: <a href="#mitigations-list" id="mitigations-list"></a>
+### Mitigations List: <a href="#mitigations-list" id="mitigations-list"></a>
 
 1. **Application Isolation and Sandboxing**:
    * Isolate applications to prevent them from interacting with sensitive parts of the system or network, reducing the impact of exploits.
@@ -43,6 +43,6 @@ By adopting these mitigations, organizations can proactively address potential v
 
 The MITRE ATT\&CK framework provides detailed information on how each mitigation can be applied to protect against various attack methods, helping organizations build resilient security defenses.
 
-#### Mitigations Documentation: <a href="#mitigations-documentation" id="mitigations-documentation"></a>
+### Mitigations Documentation: <a href="#mitigations-documentation" id="mitigations-documentation"></a>
 
 {% embed url="https://attack.mitre.org/mitigations/enterprise/" %}

@@ -4,7 +4,7 @@
 
 Information Barriers (IBs) in Microsoft Teams ensure secure communication by restricting users or groups from interacting based on organizational policies. Administrators configure IBs through Microsoft Purview, applying rules that align with compliance and business needs. These policies determine who can access Teams channels, participate in chats, or join meetings, ensuring sensitive data stays within authorized boundaries.
 
-#### **Key Functions of IBs in Teams**
+### **Key Functions of IBs in Teams**
 
 1. **Controlled Communication:**
    * Blocks unauthorized user additions to teams and channels.
@@ -18,24 +18,24 @@ Information Barriers (IBs) in Microsoft Teams ensure secure communication by res
 4. **Guest Management:**
    * Manages external guest access under IB policies for secure collaboration.
 
-#### **Operational Modes**
+### **Operational Modes**
 
 * **Open Mode:** Default for existing teams, without enforced restrictions.
 * **Implicit Mode:** Applies to new teams, ensuring only approved users join.
 * **Owner Moderated Mode:** Enables limited collaboration across segments under owner supervision.
 
-#### **Policy Changes and Impact on Users**
+### **Policy Changes and Impact on Users**
 
 When policies are modified, IBs automatically re-evaluate memberships. For example, if users no longer meet policy criteria, they lose access to chats, which become read-only, and they may be removed from teams or groups. Meeting participation is similarly restricted if policies change mid-engagement.
 
-#### **Use Cases and Benefits**
+### **Use Cases and Benefits**
 
 * **Finance:** Ensures compliance with regulations by preventing unauthorized communication between departments (e.g., advisory and trading teams).
 * **Law Firms:** Enforces ethical walls between lawyers handling different clients.
 * **Education:** Segregates students from different institutions or groups.
 * **Government:** Limits inter-departmental communication based on classification.
 
-#### **Technical Considerations**
+### **Technical Considerations**
 
 * **Scoped Directory Search:** Must be enabled to ensure IB policies function correctly.
 * **Cross-Tenant Restrictions:** IBs apply only within a tenant; federated users are not impacted.

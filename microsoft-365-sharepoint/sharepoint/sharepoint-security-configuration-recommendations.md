@@ -4,7 +4,7 @@
 
 To protect SharePoint Online from external threats and insider misuse, it's essential to configure security settings appropriately. In this section, we’ll explore some of the best practices for securing your SharePoint environment.
 
-**1. Configuring Access Controls and Permissions**
+### **Configuring Access Controls and Permissions**
 
 Properly configuring access controls and permissions in SharePoint Online is the foundation of security. Restricting access to sensitive data helps prevent unauthorized file sharing and minimizes the risk of data exfiltration.
 
@@ -14,7 +14,7 @@ Properly configuring access controls and permissions in SharePoint Online is the
 * **Avoid Over-Permissive Access:** Regularly audit and review user permissions to avoid providing more access than necessary. Revoke access when it’s no longer required.
 * **Least Privilege Principle:** Always apply the least privilege principle—users should only have the minimum level of access necessary to perform their job functions.
 
-**2. Managing External Sharing Settings**
+### **Managing External Sharing Settings**
 
 External sharing is one of the most significant risks to SharePoint Online security, making it critical to limit or monitor how files are shared outside the organization.
 
@@ -24,7 +24,7 @@ External sharing is one of the most significant risks to SharePoint Online secur
 * **Set Expiry Dates on Sharing Links:** Ensure that sharing links automatically expire after a set period, reducing the risk of forgotten or uncontrolled access.
 * **Monitor External Users:** Regularly review the list of external users and revoke access for any who no longer need it.
 
-**3. Implementing Multi-Factor Authentication (MFA)**
+### **Implementing Multi-Factor Authentication (MFA)**
 
 MFA adds an extra layer of security by requiring users to verify their identity with a second factor (such as a mobile app or SMS code) in addition to their password. This is particularly important for protecting against credential-based attacks.
 
@@ -33,7 +33,7 @@ MFA adds an extra layer of security by requiring users to verify their identity 
 * **Enforce MFA for All Users:** Require MFA for all users accessing SharePoint Online, especially admins and those with access to sensitive data.
 * **Conditional Access Policies:** Create conditional access policies to enforce MFA when accessing SharePoint from untrusted locations or devices.
 
-**4. Using Data Loss Prevention (DLP) Policies**
+### **Using Data Loss Prevention (DLP) Policies**
 
 Data Loss Prevention (DLP) policies help prevent sensitive data from being shared outside the organization by monitoring for specific types of information and taking action if certain conditions are met.
 

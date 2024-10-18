@@ -85,7 +85,7 @@
 * [File Collaboration Security Controls](microsoft-365-file-colaboration/file-collaboration-security-controls.md)
 * [Retention Policies and Labels](microsoft-365-file-colaboration/retention-policies-and-labels/README.md)
   * [Retention Policy Flowchart](microsoft-365-file-colaboration/retention-policies-and-labels/retention-policy-flowchart.md)
-  * [Powershell: Retention CMDLets](microsoft-365-file-colaboration/retention-policies-and-labels/powershell-retention-cmdlets.md)
+  * [Powershell: Retention Cmdlets](microsoft-365-file-colaboration/retention-policies-and-labels/powershell-retention-cmdlets.md)
   * [Limits for Retention Policies and Retention Label Policies in Microsoft 365](microsoft-365-file-colaboration/retention-policies-and-labels/limits-for-retention-policies-and-retention-label-policies-in-microsoft-365.md)
   * [Retention Labels for Exceptions to Retention Policies](microsoft-365-file-colaboration/retention-policies-and-labels/retention-labels-for-exceptions-to-retention-policies.md)
 * [Information Barriers](microsoft-365-file-colaboration/information-barriers/README.md)
@@ -97,7 +97,6 @@
 ## Microsoft Purview
 
 * [Purview Overview](microsoft-purview/purview-overview.md)
-* [Microsoft Purview eDiscovery](microsoft-purview/microsoft-purview-ediscovery.md)
 * [Setting Up Microsoft Purview](microsoft-purview/setting-up-microsoft-purview.md)
 * [Navigating the Microsoft Purview Portal](microsoft-purview/navigating-the-microsoft-purview-portal.md)
 * [Data Classification](microsoft-purview/data-classification.md)
@@ -114,6 +113,7 @@
 * [Purview Insider Risk Management](microsoft-purview/purview-insider-risk-management/README.md)
   * [Risk Management Settings](microsoft-purview/purview-insider-risk-management/risk-management-settings.md)
   * [Insider Risk Management Templates](microsoft-purview/purview-insider-risk-management/insider-risk-management-templates.md)
+* [Microsoft Purview eDiscovery](microsoft-purview/microsoft-purview-ediscovery.md)
 
 ## Microsoft Defender: Office 365
 

@@ -1,10 +1,10 @@
 # Sharepoint: Logging and Monitoring
 
-**Key Log Sources in SharePoint Online**
+## **Key Log Sources in SharePoint Online**
 
 To conduct effective threat hunting, it's essential to understand the various logging capabilities and data sources available in SharePoint Online. These logs capture user activities and system events, providing vital information for identifying potential threats.
 
-**Unified Audit Log (UAL)**
+### **Unified Audit Log (UAL)**
 
 The Unified Audit Log in Microsoft 365 is a comprehensive logging mechanism that tracks user and admin activities across various Microsoft 365 services, including SharePoint Online.
 
@@ -14,21 +14,14 @@ The Unified Audit Log in Microsoft 365 is a comprehensive logging mechanism that
 * Integrates with other Microsoft services like OneDrive, Teams, and Exchange.
 * Can be queried using tools like PowerShell, the Security & Compliance Center, or the Microsoft Graph API.
 
-**How to Enable the UAL:**
-
-1. Navigate to the **Microsoft 365 Compliance Center**.
-2. Under **Solutions**, select **Audit**.
-3. Click **Start recording user and admin activity** if it's not already enabled.
-4. Once enabled, SharePoint activities will be logged and searchable within the audit log.
-
-**Key Activities Logged in UAL for SharePoint Online:**
+## **Key Activities Logged in UAL for SharePoint Online:**
 
 * **File and Folder Operations:** Access, modification, and deletion of files or folders.
 * **Sharing Events:** Creation or modification of file sharing links, whether internal or external.
 * **Permission Changes:** Updates to document libraries or specific file permissions.
 * **Site and Document Library Modifications:** Actions that change site or library configurations.
 
-**SharePoint Usage Logs**
+### **SharePoint Usage Logs**
 
 SharePoint Online generates usage logs that provide insights into how files, libraries, and sites are being used.
 
@@ -40,7 +33,7 @@ SharePoint Online generates usage logs that provide insights into how files, lib
 
 These logs are typically available through the SharePoint Admin Center and are useful for identifying trends and anomalies.
 
-**Security & Compliance Center Logs**
+### **Security & Compliance Center Logs**
 
 The Microsoft 365 Security & Compliance Center provides a central location for managing compliance features and reviewing security-related logs.
 
@@ -49,7 +42,7 @@ The Microsoft 365 Security & Compliance Center provides a central location for m
 * **DLP (Data Loss Prevention) Events:** Captures when sensitive data (e.g., PII) is shared outside the organization.
 * **Alerts:** Notifications of potential security risks, such as suspicious sharing patterns or privilege escalations.
 
-**Unified Audit Log for SharePoint Online**
+### **Unified Audit Log for SharePoint Online**
 
 The Unified Audit Log is a central source for hunting threats in SharePoint Online. It contains detailed records of user actions, making it an indispensable tool for identifying anomalies.
 

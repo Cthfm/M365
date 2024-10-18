@@ -1,21 +1,21 @@
 # Hypothesis Generation
 
-### Overview <a href="#overview" id="overview"></a>
+## Overview <a href="#overview" id="overview"></a>
 
 Hypothesis generation is the foundational stage of the threat hunting process, focusing on creating and prioritizing potential threat scenarios based on intelligence, data analysis, and security trends.
 
-#### **Techniques for Generating Hypotheses** <a href="#techniques-for-generating-hypotheses" id="techniques-for-generating-hypotheses"></a>
+### **Techniques for Generating Hypotheses** <a href="#techniques-for-generating-hypotheses" id="techniques-for-generating-hypotheses"></a>
 
 1. **Threat Intelligence**: Use global and industry-specific reports to identify relevant threats.
 2. **Historical Data Analysis**: Analyze past incidents to find patterns and recurring vulnerabilities.
 3. **Security Trends**: Monitor recent security developments to anticipate emerging threats.
 
-#### **Defining and Prioritizing Hypotheses** <a href="#defining-and-prioritizing-hypotheses" id="defining-and-prioritizing-hypotheses"></a>
+### **Defining and Prioritizing Hypotheses** <a href="#defining-and-prioritizing-hypotheses" id="defining-and-prioritizing-hypotheses"></a>
 
 * **Risk Assessment**: Evaluate the impact and likelihood of threats, prioritizing those with the highest risk to the organization.
 * **Organizational Impact**: Tailor hypotheses to address critical vulnerabilities specific to your organization's assets and operations.
 
-#### **Hypothesis Example: Financial Institution** <a href="#hypothesis-example-financial-institution" id="hypothesis-example-financial-institution"></a>
+### **Hypothesis Example: Financial Institution** <a href="#hypothesis-example-financial-institution" id="hypothesis-example-financial-institution"></a>
 
 **Objective**: Develop a realistic hypothesis for a threat scenario in a specified network environment.
 
@@ -33,7 +33,7 @@ Hypothesis generation is the foundational stage of the threat hunting process, f
 4. **Anticipate Actions Upon Success**: Successful exploitation could lead to significant financial gains for the attacker, manipulation of market prices, and loss of confidence in the financial markets.
 5. **Plan Detection and Response**: Consider how anomalies in trading patterns could be detected through anomaly detection systems and what the immediate response should be, such as isolating affected systems, reversing fraudulent transactions, and notifying regulatory bodies.
 
-**Discussion Points**
+### **Discussion Points**
 
 * **Plausibility of the Hypothesis**: Evaluate the likelihood and potential methods of such an attack, considering the current security measures in place.
 * **Potential Impact**: Discuss the direct financial impact, along with broader market effects and reputational damage.

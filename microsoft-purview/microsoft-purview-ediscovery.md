@@ -1,6 +1,6 @@
 # Microsoft Purview eDiscovery
 
-### Overview
+## Overview
 
 Microsoft Purview eDiscovery (formerly known as Microsoft 365 eDiscovery) is a legal and compliance solution integrated within the Microsoft 365 compliance suite. It is designed to help organizations manage legal investigations, compliance reviews, and discovery of electronically stored information (ESI) across Microsoft 365 services. The goal is to simplify the legal hold, search, collection, review, and export of data for legal and regulatory purposes.
 

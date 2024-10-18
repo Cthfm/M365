@@ -64,8 +64,6 @@ OneDrive includes threat detection capabilities provided by **Microsoft Defender
 * **Malware Detection and Prevention:**
   * Microsoft Defender scans files stored in OneDrive for malware. If a file is identified as malicious, the system will automatically quarantine it and notify the user and administrator. This prevents the spread of malware through file sharing or syncing to other devices.
 
-***
-
 ### **Conditional Access for OneDrive**
 
 **Conditional Access** is a crucial component of OneDrive’s security architecture, allowing organizations to define and enforce granular access policies.
