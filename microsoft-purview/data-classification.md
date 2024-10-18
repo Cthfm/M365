@@ -1,6 +1,6 @@
 # Data Classification
 
-**Overview**
+## **Overview**
 
 Data classification is a foundational element in any data governance strategy, especially when it comes to threat hunting. In this lesson, we will explore how Microsoft Purview uses data classification to help security teams manage sensitive information, prioritize their threat hunting efforts, and reduce the risk of data breaches. By the end of this lesson, you’ll understand the basics of data classification in Purview and how it can be leveraged for improved security visibility.
 

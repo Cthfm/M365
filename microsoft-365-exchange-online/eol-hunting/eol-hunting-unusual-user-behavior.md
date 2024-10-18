@@ -12,22 +12,8 @@ Unusual user behavior, such as mass message deletions or changes to mailbox sett
    * **Unusual Sending Patterns:** Abnormally high volume of sent emails, especially with suspicious content or attachments.
 2. **Using Mailbox Audit Logs to Detect Mass Deletions:**
    * Review audit logs for mass deletions or suspicious activity.
-   *   Example KQL query to detect mass deletions:
-
-       ```kusto
-       AuditLogs 
-       | where Operation == "HardDelete"
-       | summarize CountDeletions = count() by UserId
-       | where CountDeletions > 100
-       ```
 3. **Detecting Changes in Mailbox Permissions:**
    * Investigate any changes to mailbox permissions, especially if permissions are being granted to users outside the organization.
-   *   Example KQL query to detect permission changes:
-
-       ```kusto
-       AuditLogs
-       | where Operation == "UpdateMailboxPermissions"
-       ```
 4. **Tracking Abnormal Sending Patterns:**
    * Monitor sent items and outbound email flow for suspicious activity, such as bulk emails containing sensitive information or malware.
 5. **Threat Hunting Insight:**

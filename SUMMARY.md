@@ -13,6 +13,10 @@
 ## Powershell
 
 * [Powershell Documentation](powershell/powershell-documentation.md)
+* [Powershell Basics](powershell/powershell-basics.md)
+* [Understanding Powershell Variables](powershell/understanding-powershell-variables.md)
+* [Understanding CMDLets](powershell/understanding-cmdlets.md)
+* [Powershell Console & ISE](powershell/powershell-console-and-ise.md)
 * [M365 Powershell Modules](powershell/m365-powershell-modules/README.md)
   * [OneDrive Powershell](powershell/m365-powershell-modules/onedrive-powershell.md)
   * [Exchange Online Powershell](powershell/m365-powershell-modules/exchange-online-powershell/README.md)
@@ -38,7 +42,7 @@
 
 ## MICROSOFT 365: EXCHANGE ONLINE
 
-* [Exchange Online Overview](microsoft-365-exchange-online/exchange-online-overview.md)
+* [Exchange Online](microsoft-365-exchange-online/exchange-online.md)
 * [Common Threats](microsoft-365-exchange-online/common-threats.md)
 * [Exchange Online: Security Features](microsoft-365-exchange-online/exchange-online-security-features.md)
 * [Exchange Admin Audit Logs](microsoft-365-exchange-online/exchange-admin-audit-logs.md)
@@ -50,52 +54,69 @@
   * [EOL Hunting: Business Email Compromise (BEC)](microsoft-365-exchange-online/eol-hunting/eol-hunting-business-email-compromise-bec.md)
 * [Reporting, Audit Log, Email Tracing Reference](microsoft-365-exchange-online/reporting-audit-log-email-tracing-reference.md)
 
-## MICROSOFT 365: ONEDRIVE
+## Microsoft 365: OneDrive
 
-* [OneDrive Overview](microsoft-365-onedrive/onedrive-overview.md)
+* [OneDrive](microsoft-365-onedrive/onedrive.md)
 * [OneDrive Security Architecture](microsoft-365-onedrive/onedrive-security-architecture.md)
 * [OneDrive Common Threats](microsoft-365-onedrive/onedrive-common-threats.md)
+* [OneDrive Overview](microsoft-365-onedrive/onedrive-overview.md)
 * [OneDrive and UAL](microsoft-365-onedrive/onedrive-and-ual.md)
 * [Key Events in OneDrive](microsoft-365-onedrive/key-events-in-onedrive.md)
-* [OneDrive Security Features](microsoft-365-onedrive/onedrive-security-features.md)
 * [OneDrive Hunting Examples](microsoft-365-onedrive/onedrive-hunting-examples/README.md)
   * [Detecting Unusual File Sharing Behavior](microsoft-365-onedrive/onedrive-hunting-examples/detecting-unusual-file-sharing-behavior.md)
   * [Monitoring File Access Patterns](microsoft-365-onedrive/onedrive-hunting-examples/monitoring-file-access-patterns.md)
   * [OneDrive Synchronization](microsoft-365-onedrive/onedrive-hunting-examples/onedrive-synchronization.md)
   * [OneDrive Insider Threat & Data Exfiltration](microsoft-365-onedrive/onedrive-hunting-examples/onedrive-insider-threat-and-data-exfiltration.md)
+* [OneDrive Security Features](microsoft-365-onedrive/onedrive-security-features.md)
 
 ## Microsoft 365: Sharepoint
 
-* [Sharepoint Overview](microsoft-365-sharepoint/sharepoint-overview.md)
-* [Microsoft 365: Sharepoint Security](microsoft-365-sharepoint/microsoft-365-sharepoint-security.md)
-* [Sharepoint Threat Hunting](microsoft-365-sharepoint/sharepoint-threat-hunting.md)
-* [Sharepoint: Logging and Monitoring](microsoft-365-sharepoint/sharepoint-logging-and-monitoring.md)
-* [Sharepoint Threat Detection Techniques](microsoft-365-sharepoint/sharepoint-threat-detection-techniques.md)
-* [Sharepoint: Advanced Hunting](microsoft-365-sharepoint/sharepoint-advanced-hunting.md)
-* [SharePoint Security Configuration Recommendations](microsoft-365-sharepoint/sharepoint-security-configuration-recommendations.md)
+* [Sharepoint](microsoft-365-sharepoint/sharepoint/README.md)
+  * [Sharepoint Admin Portal and RBAC](microsoft-365-sharepoint/sharepoint/sharepoint-admin-portal-and-rbac.md)
+  * [Microsoft 365: Sharepoint Security](microsoft-365-sharepoint/sharepoint/microsoft-365-sharepoint-security.md)
+  * [Sharepoint Threat Hunting](microsoft-365-sharepoint/sharepoint/sharepoint-threat-hunting.md)
+  * [Sharepoint: Logging and Monitoring](microsoft-365-sharepoint/sharepoint/sharepoint-logging-and-monitoring.md)
+  * [Sharepoint Threat Detection Techniques](microsoft-365-sharepoint/sharepoint/sharepoint-threat-detection-techniques.md)
+  * [Sharepoint: Advanced Hunting](microsoft-365-sharepoint/sharepoint/sharepoint-advanced-hunting.md)
+  * [Sharepoint Powershell](microsoft-365-sharepoint/sharepoint/sharepoint-powershell.md)
+  * [SharePoint Security Configuration Recommendations](microsoft-365-sharepoint/sharepoint/sharepoint-security-configuration-recommendations.md)
+
+## MICROSOFT 365: File Colaboration
+
+* [File Collaboration Security Controls](microsoft-365-file-colaboration/file-collaboration-security-controls.md)
+* [Retention Policies and Labels](microsoft-365-file-colaboration/retention-policies-and-labels/README.md)
+  * [Retention Policy Flowchart](microsoft-365-file-colaboration/retention-policies-and-labels/retention-policy-flowchart.md)
+  * [Powershell: Retention CMDLets](microsoft-365-file-colaboration/retention-policies-and-labels/powershell-retention-cmdlets.md)
+  * [Limits for Retention Policies and Retention Label Policies in Microsoft 365](microsoft-365-file-colaboration/retention-policies-and-labels/limits-for-retention-policies-and-retention-label-policies-in-microsoft-365.md)
+  * [Retention Labels for Exceptions to Retention Policies](microsoft-365-file-colaboration/retention-policies-and-labels/retention-labels-for-exceptions-to-retention-policies.md)
+* [Information Barriers](microsoft-365-file-colaboration/information-barriers/README.md)
+  * [Information Barriers: Sharepoint](microsoft-365-file-colaboration/information-barriers/information-barriers-sharepoint.md)
+  * [Information Barriers: OneDrive](microsoft-365-file-colaboration/information-barriers/information-barriers-onedrive.md)
+  * [Information Barriers: Teams](microsoft-365-file-colaboration/information-barriers/information-barriers-teams.md)
+* [Security Control References](microsoft-365-file-colaboration/security-control-references.md)
 
 ## Microsoft Purview
 
-* [Purview Overview](microsoft-purview/purview-overview/README.md)
-  * [Setting Up Microsoft Purview](microsoft-purview/purview-overview/setting-up-microsoft-purview.md)
-  * [Navigating the Microsoft Purview Portal](microsoft-purview/purview-overview/navigating-the-microsoft-purview-portal.md)
-  * [Data Classification](microsoft-purview/purview-overview/data-classification.md)
-  * [Sensitivity Labels](microsoft-purview/purview-overview/sensitivity-labels.md)
-  * [Purview Data Map](microsoft-purview/purview-overview/purview-data-map.md)
-  * [Purview Insights](microsoft-purview/purview-overview/purview-insights.md)
-  * [Auditing With Purview](microsoft-purview/purview-overview/auditing-with-purview.md)
-  * [Purview Integration with Microsoft Sentinel](microsoft-purview/purview-overview/purview-integration-with-microsoft-sentinel.md)
-  * [Data Lineage](microsoft-purview/purview-overview/data-lineage.md)
-  * [Responding to Data Access Violations](microsoft-purview/purview-overview/responding-to-data-access-violations.md)
-  * [Purview Licensing](microsoft-purview/purview-overview/purview-licensing.md)
+* [Purview Overview](microsoft-purview/purview-overview.md)
 * [Microsoft Purview eDiscovery](microsoft-purview/microsoft-purview-ediscovery.md)
+* [Setting Up Microsoft Purview](microsoft-purview/setting-up-microsoft-purview.md)
+* [Navigating the Microsoft Purview Portal](microsoft-purview/navigating-the-microsoft-purview-portal.md)
+* [Data Classification](microsoft-purview/data-classification.md)
+* [Sensitivity Labels](microsoft-purview/sensitivity-labels.md)
+* [Purview Data Map](microsoft-purview/purview-data-map.md)
+* [Purview Insights](microsoft-purview/purview-insights.md)
+* [Auditing With Purview](microsoft-purview/auditing-with-purview.md)
+* [Purview Integration with Microsoft Sentinel](microsoft-purview/purview-integration-with-microsoft-sentinel.md)
+* [Data Lineage](microsoft-purview/data-lineage.md)
+* [Responding to Data Access Violations](microsoft-purview/responding-to-data-access-violations.md)
+* [Purview Licensing](microsoft-purview/purview-licensing.md)
+* [Purview and Threat Hunting](microsoft-purview/purview-and-threat-hunting/README.md)
+  * [Azure Monitor Purview Table Reference](microsoft-purview/purview-and-threat-hunting/azure-monitor-purview-table-reference.md)
 * [Purview Insider Risk Management](microsoft-purview/purview-insider-risk-management/README.md)
   * [Risk Management Settings](microsoft-purview/purview-insider-risk-management/risk-management-settings.md)
   * [Insider Risk Management Templates](microsoft-purview/purview-insider-risk-management/insider-risk-management-templates.md)
-* [Purview and Threat Hunting](microsoft-purview/purview-and-threat-hunting/README.md)
-  * [Azure Monitor Purview Table Reference](microsoft-purview/purview-and-threat-hunting/azure-monitor-purview-table-reference.md)
 
-## Microsoft Defender Office 365
+## Microsoft Defender: Office 365
 
 * [Licensing](microsoft-defender-office-365/licensing.md)
 * [Key Features](microsoft-defender-office-365/key-features.md)
@@ -103,7 +124,7 @@
 
 ## Microsoft Cloud App Security
 
-* [Microsoft Cloud App Security Overview](microsoft-cloud-app-security/microsoft-cloud-app-security-overview.md)
+* [Microsoft Cloud App Security](microsoft-cloud-app-security/microsoft-cloud-app-security.md)
 * [Deploying Microsoft Cloud App Security](microsoft-cloud-app-security/deploying-microsoft-cloud-app-security.md)
 * [Data Protection](microsoft-cloud-app-security/data-protection.md)
 * [Policies](microsoft-cloud-app-security/policies.md)
@@ -119,19 +140,15 @@
 * [Basic Mobility and Security vs Intune](device-management/basic-mobility-and-security-vs-intune.md)
 * [Azure Monitor Intune Tables](device-management/azure-monitor-intune-tables.md)
 
-## Sharepoint OneDrive Security
-
-* [Security References](sharepoint-onedrive-security/security-references.md)
-
 ## Secure Score
 
-* [Secure Score Overview](secure-score/secure-score-overview.md)
+* [Secure Score](secure-score/secure-score.md)
 * [Secure Score in Threat Hunting](secure-score/secure-score-in-threat-hunting.md)
 * [Secure Score References](secure-score/secure-score-references.md)
 
 ## Defender XDR
 
-* [Defender XDR Overview](defender-xdr/defender-xdr-overview.md)
+* [Defender XDR](defender-xdr/defender-xdr.md)
 * [Defender XDR Licensing](defender-xdr/defender-xdr-licensing.md)
 * [Defender XDR Default Retention](defender-xdr/defender-xdr-default-retention.md)
 * [Defender XDR Advanced Hunting Table Schemas](defender-xdr/defender-xdr-advanced-hunting-table-schemas.md)

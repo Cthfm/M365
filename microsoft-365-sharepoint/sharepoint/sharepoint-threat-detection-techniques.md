@@ -48,78 +48,6 @@ In this module, we focus on identifying the key attack scenarios that a threat h
 * Excessive downloads of files from a specific user.
 * Sharing links generated for large volumes of files.
 
-**KQL Queries for Detecting Suspicious Activity**
-
-One of the most powerful tools for hunting threats in SharePoint Online is the use of **Kusto Query Language (KQL)** within the Microsoft 365 compliance or audit logs. In this section, we will walk through some practical KQL queries for identifying suspicious activity.
-
-**Detecting Unusual File Access Patterns**
-
-When files are accessed in large quantities or by users who typically don’t interact with them, it could signal an insider threat or compromised account.
-
-**KQL Query Example:**
-
-```kusto
-AuditLogs
-| where RecordType == "SharePoint"
-| where Operation == "FileAccessed"
-| summarize AccessCount = count() by UserId, FileName, Timestamp
-| where AccessCount > 20 and Timestamp between (datetime("2024-01-01")..datetime("2024-01-02"))
-```
-
-This query helps detect users accessing an unusually high number of files in a short period.
-
-**Detecting External Sharing of Sensitive Files**
-
-External sharing is one of the main methods used for data exfiltration. Monitoring file sharing activities to external domains is critical for threat detection.
-
-**KQL Query Example:**
-
-```kusto
-AuditLogs
-| where RecordType == "SharePoint"
-| where Operation == "SharingSet"
-| where SharingType == "External"
-| summarize ShareCount = count() by UserId, FileName, ExternalUserOrGroup
-| where ShareCount > 5
-```
-
-This query highlights excessive external sharing by a specific user, which could indicate malicious intent or negligence.
-
-**Detecting Privilege Escalation**
-
-Privilege escalation allows attackers or malicious insiders to elevate their permissions to access restricted areas of SharePoint Online.
-
-**KQL Query Example:**
-
-```kusto
-AuditLogs
-| where RecordType == "SharePoint"
-| where Operation == "PermissionChange"
-| where PermissionLevel == "Admin"
-| summarize ChangeCount = count() by UserId, TargetUserOrGroup
-| where ChangeCount > 1
-```
-
-This query identifies users who have suddenly gained or changed administrative permissions, which may indicate an account compromise or malicious insider activity.
-
-**Detecting Anomalous Login Behavior**
-
-Detecting logins from unusual geolocations or devices can help identify account compromise.
-
-**KQL Query Example:**
-
-```kusto
-AuditLogs
-| where RecordType == "SharePoint"
-| where Operation == "Login"
-| where UserId != "admin"
-| where ClientIP != "InternalIPRange"
-| summarize LoginCount = count() by UserId, ClientIP, Timestamp
-| where LoginCount > 1 and ClientIP != "InternalNetwork"
-```
-
-This query detects logins from external IP ranges that may indicate account compromise.
-
 **Behavioral Analysis in SharePoint Online**
 
 Behavioral analysis involves creating a baseline of normal user behavior and comparing it with current activity to identify deviations that could signify a threat.
@@ -138,34 +66,9 @@ To understand what "normal" looks like for a user, you can use audit logs to tra
 
 Users accessing highly sensitive files that they normally don’t interact with should trigger an alert. Behavioral baselines help pinpoint such deviations.
 
-**KQL Query for Monitoring Sensitive Data Access:**
-
-```kusto
-AuditLogs
-| where RecordType == "SharePoint"
-| where Operation == "FileAccessed"
-| where FileSensitivityLabel in ("Confidential", "HighlyConfidential")
-| summarize AccessCount = count() by UserId, FileName
-| where AccessCount > 5
-```
-
-This query tracks when a user accesses sensitive files, potentially indicating unauthorized access.
-
 **Detecting Deviations from Normal Usage Patterns**
 
 Using thresholds and baselines, you can detect anomalies such as spikes in file downloads, unusual login times, or unexpected permission changes.
-
-**KQL Query for Usage Anomalies:**
-
-```kusto
-AuditLogs
-| where RecordType == "SharePoint"
-| where Operation == "FileDownloaded"
-| summarize DownloadCount = count() by UserId, Timestamp
-| where DownloadCount > 50
-```
-
-This query flags any user downloading more than 50 files within a given timeframe, which may signal data exfiltration.
 
 #### **Response to Detected Threats**
 
